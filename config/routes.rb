@@ -1,4 +1,8 @@
-TalkfoodNetwork::Application.routes.draw do
+  TalkfoodNetwork::Application.routes.draw do
+  get "statik_pages/home"
+
+  get "statik_pages/help"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
