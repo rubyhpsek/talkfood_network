@@ -1,6 +1,6 @@
   TalkfoodNetwork::Application.routes.draw do
   get "statik_pages/about"
-
+  get "statik_pages/contact"
   get "statik_pages/home"
   get "statik_pages/help"
 
