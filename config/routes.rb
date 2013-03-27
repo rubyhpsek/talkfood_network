@@ -1,8 +1,22 @@
   TalkfoodNetwork::Application.routes.draw do
-  get "statik_pages/about"
-  get "statik_pages/contact"
-  get "statik_pages/home"
-  get "statik_pages/help"
+  get "users/new"
+
+  #get "statik_pages/about"
+  #get "statik_pages/contact"
+  #get "statik_pages/home"
+  #get "statik_pages/help"
+
+  get "users/new"
+
+  root to: "statik_pages#home"
+
+  match '/signup',  to: 'users#new'
+ match "/help",    to: "statik_pages#help"
+ match "/about",   to: "statik_pages#about"
+ match "/contact", to: "statik_pages#contact"
+
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -53,7 +67,7 @@
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+ # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 
