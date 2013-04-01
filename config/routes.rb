@@ -1,7 +1,9 @@
   TalkfoodNetwork::Application.routes.draw do
 
     resources :users
-  #get "statik_pages/about"
+    resources :sessions, only: [:new, :create, :destroy]
+
+    #get "statik_pages/about"
   #get "statik_pages/contact"
   #get "statik_pages/home"
   #get "statik_pages/help"
