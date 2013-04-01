@@ -1,6 +1,6 @@
   TalkfoodNetwork::Application.routes.draw do
-  get "users/new"
 
+    resources :users
   #get "statik_pages/about"
   #get "statik_pages/contact"
   #get "statik_pages/home"
@@ -10,8 +10,12 @@
 
   root to: "statik_pages#home"
 
-  match '/signup',  to: 'users#new'
- match "/help",    to: "statik_pages#help"
+    match '/signup',  to: 'users#new'
+    match '/signin',  to: 'sessions#new'
+    match '/signout', to: 'sessions#destroy', via: :delete
+
+
+    match "/help",    to: "statik_pages#help"
  match "/about",   to: "statik_pages#about"
  match "/contact", to: "statik_pages#contact"
 
